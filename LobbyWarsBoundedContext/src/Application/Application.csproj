@@ -15,4 +15,11 @@
         <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Common\Interfaces\" />
+      <Folder Include="Common\Mappings\" />
+      <Folder Include="Common\Models\" />
+      <Folder Include="Common\Security\" />
+    </ItemGroup>
+
 </Project>
