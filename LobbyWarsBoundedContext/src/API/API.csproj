@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <RootNamespace>SignaturitAdmissionTest.API</RootNamespace>
+        <AssemblyName>SignaturitAdmissionTest.API</AssemblyName>
+        <IsPackable>true</IsPackable>
+        <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
+        <UserSecretsId>8c72a457-6fb0-4aaa-a0c5-cd9bae1de17e</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Application\Application.csproj" />
+        <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="SignaturitAdmissionTest.Application.IntegrationTests" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.AspNetCore" />
+        <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" />
+        <PackageReference Include="NSwag.AspNetCore" />
+        <PackageReference Include="NSwag.MSBuild" />
+        <PackageReference Include="ZymLabs.NSwag.FluentValidation.AspNetCore" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    </PropertyGroup>
+
+</Project>

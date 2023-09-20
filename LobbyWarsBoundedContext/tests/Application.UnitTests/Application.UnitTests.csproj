@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>SignaturitAdmissionTest.Application.UnitTests</RootNamespace>
+        <AssemblyName>SignaturitAdmissionTest.Application.UnitTests</AssemblyName>
+
+        <IsPackable>false</IsPackable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Common\Behaviours\**" />
+      <Compile Remove="Common\Mappings\**" />
+      <Compile Remove="Trial\**" />
+      <EmbeddedResource Remove="Common\Behaviours\**" />
+      <EmbeddedResource Remove="Common\Mappings\**" />
+      <EmbeddedResource Remove="Trial\**" />
+      <None Remove="Common\Behaviours\**" />
+      <None Remove="Common\Mappings\**" />
+      <None Remove="Trial\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" />
+        <PackageReference Include="nunit" />
+        <PackageReference Include="NUnit3TestAdapter" />
+        <PackageReference Include="FluentAssertions" />
+        <PackageReference Include="Moq" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Application\Application.csproj" />
+        <ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
